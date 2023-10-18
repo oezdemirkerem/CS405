@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Simple Bar Chart</title>
+        <style type="text/css">
+            .chart {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                background-color: #f5f5f5;
+                padding: 10px;
+                height: 600px;
+                width: 850px;
+            }
+    
+            .bar {
+                background-color: #0639f1;
+                margin-right: 10px;
+                height: 0;
+                width: 50px;
+                transition: height 1s ease-in-out;
+                position: relative;
+            }
+    
+            .bar:hover {
+                background-color: #0c61d1;
+            }
+            
+            .chart::before {
+                content: "Number of Deaths (Males)";
+                transform: rotate(-90deg);
+                position: absolute;
+                left: -80px;
+                top: 300px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            
+            .chart::after {
+                content: "Age Groups";
+                position: absolute;
+                left: 400px;
+                bottom: 90px; 
+                margin-bottom: -20px; 
+                font-size: 20px;
+                font-weight: bold;
+            }
+            
+            .bar::before {
+                content: attr(data-label);
+                position: absolute;
+                bottom: -20px;
+                left: 0;
+                width: 100%;
+                text-align:center;
+            }         
+        </style>
+    </head>
+    <body>
+        <div class="chart">
+            <div class="bar" style="height: 53.28px;" data-label="0-4"></div>
+            <div class="bar" style="height: 5.92px;" data-label="5-9"></div>
+            <div class="bar" style="height: 6.82px;" data-label="10-14"></div>
+            <div class="bar" style="height: 14.810px;" data-label="15-19"></div>
+            <div class="bar" style="height: 20.56px;" data-label="20-24"></div>
+            <div class="bar" style="height: 21.50px;" data-label="25-29"></div>
+            <div class="bar" style="height: 21.93px;" data-label="30-34"></div>
+            <div class="bar" style="height: 27.63px;" data-label="35-39"></div>
+            <div class="bar" style="height: 42.16px;" data-label="40-44"></div>
+            <div class="bar" style="height: 57.94px;" data-label="45-49"></div>
+            <div class="bar" style="height: 90.54px;" data-label="50-54"></div>
+            <div class="bar" style="height: 149.86px;" data-label="55-59"></div>
+            <div class="bar" style="height: 203.38px;" data-label="60-64"></div>
+            <div class="bar" style="height: 273.60px;" data-label="65-69"></div>
+            <div class="bar" style="height: 298.68px;" data-label="70-75"></div>
+            <div class="bar" style="height: 600.0px;" data-label="75+"></div>
+        </div>
+    </body>
+    </html>
